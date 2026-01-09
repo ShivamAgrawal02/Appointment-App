@@ -4,7 +4,7 @@ AppointmentApp is a simple Angular application built to understand and practice 
 
 This project focuses on learning Angular fundamentals through hands-on implementation rather than complex UI or backend integration.
 
-🚀 Features
+##🚀 Features
 
 Add appointments with description and date
 
@@ -16,8 +16,8 @@ Persist appointments using Browser Local Storage
 
 Data remains available after page refresh
 
-🧠 What I Learned from This Project
-1️⃣ Angular Architecture
+##🧠 What I Learned from This Project
+##1️⃣ Angular Architecture
 
 Angular project structure
 
@@ -33,7 +33,7 @@ Models (Interfaces)
 
 How Angular connects HTML, TypeScript, and Modules
 
-2️⃣ Data Binding in Angular
+##2️⃣ Data Binding in Angular
 🔹 One-Way Data Binding
 
 Interpolation:
@@ -51,7 +51,7 @@ Used [(ngModel)] to synchronize UI and component state:
 
 [(ngModel)]="appointmentDescription"
 
-3️⃣ Angular Directives
+##3️⃣ Angular Directives
 
 Structural directive:
 
@@ -61,7 +61,7 @@ Event binding:
 
 (click)="addAppointment()"
 
-4️⃣ Forms Handling
+##4️⃣ Forms Handling
 
 Used Template-Driven Forms
 
@@ -71,7 +71,7 @@ Learned how <input type="date"> behaves in Angular
 
 Understood differences between string and Date in form binding
 
-5️⃣ Component Lifecycle (ngOnInit)
+##5️⃣ Component Lifecycle (ngOnInit)
 
 Learned Angular lifecycle hooks
 
@@ -81,7 +81,7 @@ Load appointments from Local Storage
 
 Initialize component state on load
 
-6️⃣ Local Storage (Persistence)
+##6️⃣ Local Storage (Persistence)
 
 Stored data using:
 
@@ -97,7 +97,7 @@ Learned that Local Storage stores stringified data only
 
 Understood how Date objects are serialized and restored
 
-7️⃣ TypeScript & Models
+##7️⃣ TypeScript & Models
 
 Created and used interfaces for strong typing
 
@@ -111,7 +111,7 @@ export interface Appointment {
   date: Date;
 }
 
-8️⃣ Debugging & Error Resolution
+##8️⃣ Debugging & Error Resolution
 
 Fixed Angular errors like:
 
@@ -123,7 +123,7 @@ Used browser DevTools and console.log() effectively
 
 Learned importance of strict typing in Angular templates
 
-🛠️ Tech Stack
+##🛠️ Tech Stack
 
 Angular 16
 
@@ -133,7 +133,7 @@ HTML / CSS
 
 Browser Local Storage
 
-▶️ Running the Application
+##▶️ Running the Application
 npm install
 ng serve
 

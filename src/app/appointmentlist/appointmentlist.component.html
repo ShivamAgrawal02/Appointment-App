@@ -1,1 +1,6 @@
 <p>appointmentlist works!</p>
+<div>
+    <input [(ngModel)]="appointmentDescription" placeholder="Enter your decription">
+    <input  type="date" [(ngModel)]="appointmentDate" >
+    <button (click)="AddAppointment()">Add</button>
+</div>

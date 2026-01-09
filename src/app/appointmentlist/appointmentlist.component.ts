@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Appointment } from '../models/appointment';
+
 
 @Component({
   selector: 'app-appointmentlist',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./appointmentlist.component.css']
 })
 export class AppointmentlistComponent {
+ appointmentDescription:string="";
+ appointmentDate:Date = new Date();
+ appointments:Appointment []=[];
+  AddAppointment()
+  {
+    let newappointment:Appointment={
+      id:Date.now(),
+      description: this.appointmentDescription,
+      date:this.appointmentDate
+    }
+    this.appointments.push(newappointment);
+    alert("Your Appointment has been Added");
+  }
+
 
 }

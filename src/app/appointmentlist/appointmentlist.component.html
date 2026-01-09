@@ -3,4 +3,13 @@
     <input [(ngModel)]="appointmentDescription" placeholder="Enter your decription">
     <input  type="date" [(ngModel)]="appointmentDate" >
     <button (click)="AddAppointment()">Add</button>
+    <ul>
+        <li *ngFor="let appointment of appointments; index as i">
+            {{$any(appointment).description}} 
+            {{$any(appointment).date}}    
+            <button (click)="DeleteAppointment(i)">Delete</button>
+
+        </li>
+    </ul>
 </div>
+

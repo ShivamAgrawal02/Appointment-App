@@ -19,7 +19,17 @@ export class AppointmentlistComponent {
       date:this.appointmentDate
     }
     this.appointments.push(newappointment);
-    alert("Your Appointment has been Added");
+    localStorage.setItem("appointments",JSON.stringify(this.appointments));
+    this.appointmentDate= new Date();
+    this.appointmentDescription="";
+
+  
+  }
+
+  DeleteAppointment(index:number)
+  {
+    this.appointments.splice(index,1);
+    localStorage.setItem("appointments",JSON.stringify(this.appointments));
   }
 
 

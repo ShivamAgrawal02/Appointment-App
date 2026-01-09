@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Appointment } from '../models/appointment';
+import { OnInit } from '@angular/core';
 
 
 @Component({
@@ -7,10 +8,17 @@ import { Appointment } from '../models/appointment';
   templateUrl: './appointmentlist.component.html',
   styleUrls: ['./appointmentlist.component.css']
 })
-export class AppointmentlistComponent {
+export class AppointmentlistComponent implements OnInit {
+ text:string="APPOINTMENT LIST";
  appointmentDescription:string="";
  appointmentDate:Date = new Date();
  appointments:Appointment []=[];
+
+ ngOnInit(): void {
+     let appointmentFromLocalStorage = localStorage.getItem("appointments");
+     this.appointments = appointmentFromLocalStorage? JSON.parse(appointmentFromLocalStorage):[];
+ }
+
   AddAppointment()
   {
     let newappointment:Appointment={

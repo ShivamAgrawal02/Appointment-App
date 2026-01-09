@@ -1,15 +1,48 @@
-<p>appointmentlist works!</p>
-<div>
-    <input [(ngModel)]="appointmentDescription" placeholder="Enter your decription">
-    <input  type="date" [(ngModel)]="appointmentDate" >
-    <button (click)="AddAppointment()">Add</button>
-    <ul>
-        <li *ngFor="let appointment of appointments; index as i">
-            {{$any(appointment).description}} 
-            {{$any(appointment).date}}    
-            <button (click)="DeleteAppointment(i)">Delete</button>
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">{{text}}</h4>
+        </div>
+        
+        <div class="card-body">
+            <div class="row g-2 mb-4">
+                <div class="col-md-6">
+                    <input [(ngModel)]="appointmentDescription" 
+                           class="form-control" 
+                           placeholder="Enter your description">
+                </div>
+                <div class="col-md-4">
+                    <input type="date" 
+                           [(ngModel)]="appointmentDate" 
+                           class="form-control">
+                </div>
+                <div class="col-md-2">
+                    <button (click)="AddAppointment()" 
+                            class="btn btn-success w-100">
+                        Add
+                    </button>
+                </div>
+            </div>
 
-        </li>
-    </ul>
+            <ul class="list-group">
+                <li *ngFor="let appointment of appointments; index as i" 
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                    
+                    <div>
+                        <strong class="d-block">{{$any(appointment).description}}</strong>
+                        <small class="text-muted">{{$any(appointment).date | date:'mediumDate'}}</small>
+                    </div>
+
+                    <button (click)="DeleteAppointment(i)" 
+                            class="btn btn-outline-danger btn-sm">
+                        Delete
+                    </button>
+                </li>
+            </ul>
+
+            <div *ngIf="appointments.length === 0" class="text-center text-muted mt-3">
+                No appointments scheduled.
+            </div>
+        </div>
+    </div>
 </div>
-
